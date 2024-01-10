@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "repos",
+  "info": {
+    "singularName": "repo",
+    "pluralName": "repos",
+    "displayName": "Repo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "repoUrl": {
+      "type": "text"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "repos"
+    }
+  }
+}
